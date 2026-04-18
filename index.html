@@ -1,0 +1,829 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<title>Divine Magazine - By Nubian Goddess</title>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;600;700;800;900&family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+:root {
+  --black: #000000;
+  --white: #ffffff;
+  --cream: #faf8f3;
+  --gold: #d4af37;
+  --text: #222222;
+  --light: #f5f5f5;
+  --border: #e5e5e5;
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+html, body {
+  font-family: 'Bodoni Moda', serif;
+  background: var(--white);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+}
+
+body { line-height: 1.5; }
+
+/* TOP BAR */
+.top-bar {
+  background: var(--black);
+  color: var(--white);
+  text-align: center;
+  padding: 8px 20px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+}
+
+/* NAVIGATION */
+.nav {
+  background: var(--white);
+  border-bottom: 1px solid var(--border);
+  padding: 20px 50px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.nav-top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.nav-logo {
+  text-align: center;
+  flex: 1;
+}
+
+.nav-logo h1 {
+  font-size: 42px;
+  font-weight: 900;
+  letter-spacing: 12px;
+  margin: 0;
+  line-height: 1;
+}
+
+.nav-logo .tagline {
+  font-family: 'Poppins', sans-serif;
+  font-size: 9px;
+  letter-spacing: 3px;
+  color: var(--text);
+  margin-top: 5px;
+  text-transform: uppercase;
+}
+
+.nav-actions {
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.nav-actions a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+}
+
+.nav-menu {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  list-style: none;
+  border-top: 1px solid var(--border);
+  padding-top: 15px;
+}
+
+.nav-menu a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--text);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.nav-menu a:hover { color: var(--gold); }
+
+/* HERO */
+.hero {
+  background: var(--cream);
+  padding: 120px 50px;
+  text-align: center;
+  border-bottom: 1px solid var(--border);
+}
+
+.hero .kicker {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.hero h1 {
+  font-size: 96px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  line-height: 1;
+  margin-bottom: 30px;
+  color: var(--black);
+}
+
+.hero .subtitle {
+  font-size: 22px;
+  font-style: italic;
+  color: var(--text);
+  max-width: 700px;
+  margin: 0 auto 40px;
+  line-height: 1.4;
+}
+
+.hero .description {
+  font-size: 15px;
+  max-width: 600px;
+  margin: 0 auto 50px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+.cta-button {
+  background: var(--black);
+  color: var(--white);
+  padding: 18px 50px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  transition: background 0.3s;
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid var(--black);
+}
+
+.cta-button:hover {
+  background: var(--gold);
+  color: var(--black);
+  border-color: var(--gold);
+}
+
+.cta-secondary {
+  background: transparent;
+  color: var(--black);
+  padding: 18px 50px;
+  font-size: 12px;
+  font-weight: 600;
+  letter-spacing: 3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  display: inline-block;
+  font-family: 'Poppins', sans-serif;
+  border: 2px solid var(--black);
+  margin-left: 15px;
+}
+
+.cta-secondary:hover {
+  background: var(--black);
+  color: var(--white);
+}
+
+/* SECTION */
+.section {
+  padding: 100px 50px;
+  border-bottom: 1px solid var(--border);
+}
+
+.section-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-header {
+  text-align: center;
+  margin-bottom: 70px;
+}
+
+.section-header .kicker {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.section-header h2 {
+  font-size: 52px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.section-header .subtitle {
+  font-size: 16px;
+  font-style: italic;
+  color: var(--text);
+  max-width: 600px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* FEATURED ISSUE */
+.featured-issue {
+  background: var(--black);
+  color: var(--white);
+  padding: 100px 50px;
+  text-align: center;
+}
+
+.featured-issue .kicker {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  letter-spacing: 4px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 25px;
+}
+
+.featured-issue h2 {
+  font-size: 68px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin-bottom: 20px;
+  color: var(--white);
+}
+
+.featured-issue .issue-title {
+  font-size: 24px;
+  font-style: italic;
+  color: var(--gold);
+  margin-bottom: 40px;
+}
+
+.featured-issue p {
+  font-size: 16px;
+  max-width: 700px;
+  margin: 0 auto 20px;
+  line-height: 1.8;
+  color: var(--white);
+}
+
+.featured-issue .price {
+  font-size: 36px;
+  font-weight: 900;
+  color: var(--gold);
+  margin: 40px 0 30px;
+  letter-spacing: 2px;
+}
+
+.featured-issue .cta-button {
+  background: var(--gold);
+  color: var(--black);
+  border-color: var(--gold);
+}
+
+.featured-issue .cta-button:hover {
+  background: var(--white);
+  border-color: var(--white);
+}
+
+/* ISSUE CARDS */
+.issues-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  margin-top: 50px;
+}
+
+.issue-card {
+  background: var(--white);
+  border: 1px solid var(--border);
+  padding: 40px 30px;
+  text-align: center;
+  transition: border-color 0.3s, transform 0.3s;
+}
+
+.issue-card:hover {
+  border-color: var(--gold);
+  transform: translateY(-5px);
+}
+
+.issue-card.coming-soon {
+  background: var(--light);
+  opacity: 0.7;
+}
+
+.issue-card .kicker {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  letter-spacing: 3px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 15px;
+}
+
+.issue-card h3 {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+}
+
+.issue-card p {
+  font-size: 14px;
+  color: var(--text);
+  line-height: 1.6;
+  margin-bottom: 25px;
+  font-style: italic;
+}
+
+.issue-card .status {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-top: 20px;
+  font-weight: 600;
+}
+
+.issue-card a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  color: var(--black);
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: 600;
+  border-bottom: 1px solid var(--gold);
+  padding-bottom: 3px;
+}
+
+/* ABOUT SECTION */
+.about-content {
+  max-width: 800px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.about-content p {
+  font-size: 16px;
+  line-height: 1.9;
+  margin-bottom: 20px;
+  color: var(--text);
+}
+
+.about-content .signature {
+  font-size: 20px;
+  font-style: italic;
+  color: var(--gold);
+  margin-top: 40px;
+}
+
+/* FEATURES GRID */
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  margin-top: 50px;
+}
+
+.feature-item {
+  text-align: center;
+  padding: 30px;
+}
+
+.feature-item .icon {
+  font-size: 28px;
+  color: var(--gold);
+  margin-bottom: 15px;
+}
+
+.feature-item h3 {
+  font-size: 20px;
+  font-weight: 900;
+  letter-spacing: 1px;
+  margin-bottom: 15px;
+  color: var(--black);
+}
+
+.feature-item p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: var(--text);
+}
+
+/* NEWSLETTER */
+.newsletter {
+  background: var(--cream);
+  padding: 80px 50px;
+  text-align: center;
+}
+
+.newsletter h2 {
+  font-size: 36px;
+  font-weight: 900;
+  letter-spacing: 2px;
+  margin-bottom: 20px;
+}
+
+.newsletter p {
+  font-size: 15px;
+  max-width: 500px;
+  margin: 0 auto 30px;
+  line-height: 1.7;
+}
+
+.newsletter-form {
+  display: flex;
+  max-width: 500px;
+  margin: 0 auto;
+  gap: 0;
+}
+
+.newsletter-form input {
+  flex: 1;
+  padding: 15px 20px;
+  border: 2px solid var(--black);
+  border-right: none;
+  font-family: 'Poppins', sans-serif;
+  font-size: 13px;
+  background: var(--white);
+}
+
+.newsletter-form button {
+  background: var(--black);
+  color: var(--white);
+  border: 2px solid var(--black);
+  padding: 15px 30px;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  cursor: pointer;
+  font-weight: 600;
+}
+
+.newsletter-form button:hover {
+  background: var(--gold);
+  border-color: var(--gold);
+  color: var(--black);
+}
+
+/* FOOTER */
+.footer {
+  background: var(--black);
+  color: var(--white);
+  padding: 60px 50px 30px;
+}
+
+.footer-inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.footer-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr 1fr 1fr;
+  gap: 50px;
+  margin-bottom: 40px;
+}
+
+.footer-brand h3 {
+  font-size: 28px;
+  font-weight: 900;
+  letter-spacing: 4px;
+  margin-bottom: 10px;
+  color: var(--white);
+}
+
+.footer-brand .sub {
+  font-family: 'Poppins', sans-serif;
+  font-size: 10px;
+  letter-spacing: 2px;
+  color: var(--gold);
+  text-transform: uppercase;
+  margin-bottom: 20px;
+}
+
+.footer-brand p {
+  font-size: 13px;
+  line-height: 1.7;
+  color: rgba(255,255,255,0.7);
+}
+
+.footer-column h4 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: var(--gold);
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+.footer-column ul {
+  list-style: none;
+}
+
+.footer-column li {
+  margin-bottom: 10px;
+}
+
+.footer-column a {
+  font-family: 'Poppins', sans-serif;
+  font-size: 12px;
+  color: rgba(255,255,255,0.8);
+  text-decoration: none;
+}
+
+.footer-column a:hover {
+  color: var(--gold);
+}
+
+.footer-bottom {
+  border-top: 1px solid rgba(255,255,255,0.1);
+  padding-top: 25px;
+  text-align: center;
+  font-family: 'Poppins', sans-serif;
+  font-size: 11px;
+  color: rgba(255,255,255,0.5);
+  letter-spacing: 1px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .nav { padding: 15px 20px; }
+  .nav-logo h1 { font-size: 28px; letter-spacing: 6px; }
+  .nav-menu { gap: 20px; font-size: 10px; }
+  .nav-actions a { font-size: 9px; }
+  
+  .hero { padding: 70px 20px; }
+  .hero h1 { font-size: 52px; }
+  .hero .subtitle { font-size: 16px; }
+  .cta-button, .cta-secondary { 
+    padding: 14px 30px; 
+    font-size: 11px; 
+    display: block; 
+    margin: 10px 0;
+  }
+  
+  .section { padding: 60px 20px; }
+  .section-header h2 { font-size: 32px; }
+  
+  .featured-issue { padding: 60px 20px; }
+  .featured-issue h2 { font-size: 42px; }
+  .featured-issue .issue-title { font-size: 18px; }
+  .featured-issue .price { font-size: 28px; }
+  
+  .issues-grid { grid-template-columns: 1fr; gap: 20px; }
+  .features-grid { grid-template-columns: 1fr; gap: 30px; }
+  
+  .newsletter { padding: 50px 20px; }
+  .newsletter-form { flex-direction: column; }
+  .newsletter-form input { border-right: 2px solid var(--black); border-bottom: none; }
+  .newsletter-form button { padding: 15px; }
+  
+  .footer { padding: 40px 20px 20px; }
+  .footer-grid { grid-template-columns: 1fr; gap: 30px; }
+}
+</style>
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="top-bar">
+  Issue 01 Now Available · Free Digital Download After Purchase
+</div>
+
+<!-- NAVIGATION -->
+<nav class="nav">
+  <div class="nav-top">
+    <div class="nav-actions">
+      <a href="#about">About</a>
+      <a href="#issues">Issues</a>
+    </div>
+    
+    <div class="nav-logo">
+      <h1>DIVINE</h1>
+      <div class="tagline">By Nubian Goddess · Est. 2026</div>
+    </div>
+    
+    <div class="nav-actions">
+      <a href="#newsletter">Subscribe</a>
+      <a href="#current">Shop</a>
+    </div>
+  </div>
+  
+  <ul class="nav-menu">
+    <li><a href="#current">Current Issue</a></li>
+    <li><a href="#issues">All Issues</a></li>
+    <li><a href="#inside">What's Inside</a></li>
+    <li><a href="#about">About</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="kicker">A Luxury Digital Magazine</div>
+  <h1>DIVINE</h1>
+  <p class="subtitle">Unleashing the power within.<br>Where ancient wisdom meets future vision.</p>
+  <p class="description">A luxury digital magazine celebrating Black excellence, AI fashion design, and cultural empowerment — for kings and queens, visionaries and sovereigns, the divine in all of us.</p>
+  <a href="#current" class="cta-button">Shop Current Issue</a>
+  <a href="#about" class="cta-secondary">Learn More</a>
+</section>
+
+<!-- FEATURED ISSUE -->
+<section class="featured-issue" id="current">
+  <div class="kicker">Current Issue · 2026</div>
+  <h2>ISSUE 01</h2>
+  <div class="issue-title">The Emergence</div>
+  
+  <p>Walk through the Fusion Realms. Study the AI Fashion Design Codex. Practice the Method of Becoming. Meet the Pantheon of divine archetypes.</p>
+  
+  <p>This is your inaugural portal into the world of Divine — a transformational journey through past, present, and future dimensions of power and self-actualization.</p>
+  
+  <div class="price">$12.00</div>
+  
+  <a href="[YOUR_LEMON_SQUEEZY_LINK]" class="cta-button">Purchase Issue 01</a>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="kicker">About Divine</div>
+      <h2>A New Vision</h2>
+      <p class="subtitle">Celebrating Black excellence, AI innovation, and the divine power in every soul.</p>
+    </div>
+    
+    <div class="about-content">
+      <p>Divine is not merely a magazine. It is a portal — where fashion is not worn but summoned, where style is not chosen but channeled from realms beyond the visible.</p>
+      
+      <p>Created by visionary designer Natasha Dyson, founder of Nubian Goddess, Divine Magazine explores the intersection of ancestral wisdom and future innovation through luxury editorial storytelling, AI-designed fashion, and cultural empowerment.</p>
+      
+      <p>Each issue is a cinematic experience designed for the divine in all of us — kings and queens, sovereigns and visionaries, warriors and alchemists. Because power is not bound by gender. It is claimed by those ready to rise.</p>
+      
+      <div class="signature">— Natasha Dyson, Founder & Creative Director</div>
+    </div>
+  </div>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section class="section" id="inside">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="kicker">What's Inside</div>
+      <h2>Each Issue Contains</h2>
+      <p class="subtitle">A curated journey through the realms of divine expression.</p>
+    </div>
+    
+    <div class="features-grid">
+      <div class="feature-item">
+        <div class="icon">◆</div>
+        <h3>FUSION REALMS</h3>
+        <p>Editorial fashion stories exploring past, present, and future dimensions of style and cultural power.</p>
+      </div>
+      
+      <div class="feature-item">
+        <div class="icon">◆</div>
+        <h3>AI FASHION CODEX</h3>
+        <p>Principles and practices for creating AI-designed fashion that honors the divine in every form.</p>
+      </div>
+      
+      <div class="feature-item">
+        <div class="icon">◆</div>
+        <h3>METHOD OF BECOMING</h3>
+        <p>Transformational rituals and practices for stepping into your divine self and claiming your power.</p>
+      </div>
+      
+      <div class="feature-item">
+        <div class="icon">◆</div>
+        <h3>THE PANTHEON</h3>
+        <p>Divine archetypes across cultures and eras — facets of your own power waiting to be embodied.</p>
+      </div>
+      
+      <div class="feature-item">
+        <div class="icon">◆</div>
+        <h3>ORACLE'S DESK</h3>
+        <p>Visionary insights, prophecies, symbols, and guidance for those in transformation.</p>
+      </div>
+      
+      <div class="feature-item">
+        <div class="icon">◆</div>
+        <h3>EDITORIAL GALLERIES</h3>
+        <p>High-fashion imagery celebrating Black excellence, cultural heritage, and future innovation.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ALL ISSUES -->
+<section class="section" id="issues">
+  <div class="section-inner">
+    <div class="section-header">
+      <div class="kicker">The Collection</div>
+      <h2>All Issues</h2>
+      <p class="subtitle">Collect every edition of Divine. Each issue opens a new portal.</p>
+    </div>
+    
+    <div class="issues-grid">
+      <div class="issue-card">
+        <div class="kicker">Issue 01 · 2026</div>
+        <h3>THE EMERGENCE</h3>
+        <p>The inaugural portal — walk through the Fusion Realms and discover your divine self.</p>
+        <a href="#current">Shop $12.00 →</a>
+      </div>
+      
+      <div class="issue-card coming-soon">
+        <div class="kicker">Issue 02 · Coming Soon</div>
+        <h3>TO BE REVEALED</h3>
+        <p>The next portal opens soon. Subscribe to be the first to know when it arrives.</p>
+        <div class="status">Coming Soon</div>
+      </div>
+      
+      <div class="issue-card coming-soon">
+        <div class="kicker">Issue 03 · Coming Soon</div>
+        <h3>TO BE REVEALED</h3>
+        <p>New realms. New visions. New codes of divine expression.</p>
+        <div class="status">Coming Soon</div>
+      </div>
+    </div>
+    
+    <p style="text-align: center; margin-top: 50px; font-style: italic; color: var(--gold); font-size: 15px;">More issues to come. Each one unveiled in its own time.</p>
+  </div>
+</section>
+
+<!-- NEWSLETTER -->
+<section class="newsletter" id="newsletter">
+  <div style="font-family: 'Poppins', sans-serif; font-size: 11px; letter-spacing: 3px; color: var(--gold); text-transform: uppercase; margin-bottom: 15px;">Join The Divine</div>
+  <h2>Be First to Know</h2>
+  <p>Subscribe to receive exclusive previews, new issue releases, and behind-the-scenes access to the world of Divine.</p>
+  
+  <form class="newsletter-form" onsubmit="event.preventDefault(); alert('Thank you for subscribing!')">
+    <input type="email" placeholder="YOUR EMAIL ADDRESS" required>
+    <button type="submit">Subscribe</button>
+  </form>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer" id="contact">
+  <div class="footer-inner">
+    <div class="footer-grid">
+      <div class="footer-brand">
+        <h3>DIVINE</h3>
+        <div class="sub">By Nubian Goddess</div>
+        <p>A luxury digital magazine celebrating Black excellence, AI fashion design, and cultural empowerment — for the divine in all of us. Founded by Natasha Dyson.</p>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Magazine</h4>
+        <ul>
+          <li><a href="#current">Current Issue</a></li>
+          <li><a href="#issues">All Issues</a></li>
+          <li><a href="#inside">What's Inside</a></li>
+          <li><a href="#newsletter">Subscribe</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>About</h4>
+        <ul>
+          <li><a href="#about">Our Story</a></li>
+          <li><a href="#about">Creator</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-column">
+        <h4>Connect</h4>
+        <ul>
+          <li><a href="https://instagram.com/nubiancolourgoddess" target="_blank">Instagram</a></li>
+          <li><a href="https://tiktok.com/@natashadyson6" target="_blank">TikTok</a></li>
+          <li><a href="mailto:nubiancolourgoddess@gmail.com">Email</a></li>
+        </ul>
+      </div>
+    </div>
+    
+    <div class="footer-bottom">
+      © 2026 Nubian Goddess · Divine Magazine · All Rights Reserved
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
